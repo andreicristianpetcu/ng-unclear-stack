@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TreeModule } from 'angular-tree-component';
 
 @Component({
   selector: 'app-my-new-component',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyNewComponentComponent implements OnInit {
 
-  constructor() { }
+  constructor(private treeModule: TreeModule) { }
 
   ngOnInit() {
     // throw new Error("Some error");
