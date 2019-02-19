@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { TreeModule } from 'angular-tree-component';
+
 import { AppComponent } from './app.component';
 import { MyNewComponentComponent } from './my-new-component/my-new-component.component';
 
@@ -10,7 +12,7 @@ import { MyNewComponentComponent } from './my-new-component/my-new-component.com
     MyNewComponentComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule, TreeModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
