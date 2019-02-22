@@ -1,8 +1,11 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppComponent } from './app.component';
-import { MyNewComponentComponent } from './my-new-component/my-new-component.component';
+import {CommonModule} from '@angular/common';
+import {RouterModule} from '@angular/router';
+
+import {AppComponent} from './app.component';
+import {MyNewComponentComponent} from './my-new-component/my-new-component.component';
 
 @NgModule({
   declarations: [
@@ -10,9 +13,17 @@ import { MyNewComponentComponent } from './my-new-component/my-new-component.com
     MyNewComponentComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    CommonModule,
+    RouterModule.forChild([
+      {
+        path: 'new',
+        component: MyNewComponentComponent
+      }
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
