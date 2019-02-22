@@ -17,13 +17,14 @@ import {MyNewComponentComponent} from './my-new-component/my-new-component.compo
     CommonModule,
     RouterModule.forChild([
       {
-        path: 'new',
-        component: MyNewComponentComponent
-      }
+        path: 'admin',
+        loadChildren: './admin-routing.module#AdminRoutingModule'
+      },
     ])
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: [RouterModule]
 })
 export class AppModule {
 }
